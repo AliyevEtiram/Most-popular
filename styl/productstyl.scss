@@ -1,0 +1,225 @@
+@import "./mixins";
+
+* {
+    box-sizing: border-box;
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#product {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+
+    .container {
+        // background-color: #ce0d0d;
+        display: flex;
+        align-items: center;
+        padding: 0;
+
+        @include mobile{
+                flex-wrap: wrap;
+                justify-content: center
+        }
+
+        &__photo {
+            width: 720px;
+            height: 784px;
+            padding: 0;
+
+            @include mobile{
+                width: 100%;
+                // height: 784px;
+            }
+
+            &-img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__information {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background-color: #fafafa;
+            width: 401px;
+            height: 784px;
+            padding: 80px 0;
+            align-items: center;
+            justify-content: center;
+
+           
+
+            &-name {
+                font-family: Montserrat;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 32px;
+                letter-spacing: 0.1px;
+                text-align: center;
+                color: #252b42;
+            }
+
+            &-text {
+                color: #737373;
+                text-align: center;
+                font-family: Montserrat;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: 0.2px;
+            }
+
+            &-img {
+                width: 348px;
+                height: 226px;
+            }
+
+            &-english {
+                font-family: Montserrat;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0.2px;
+                text-align: center;
+                color: #252b42;
+            }
+
+            &-icon {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                justify-content: center;
+
+                &-element {
+                }
+
+                &-sales {
+                    color: #737373;
+                    font-family: Montserrat;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 24px;
+                    letter-spacing: 0.2px;
+                }
+            }
+
+            &-price {
+                display: flex;
+                justify-content: center;
+                gap: 5px;
+
+                &-old {
+                    color: #bdbdbd;
+                    font-family: Montserrat;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 24px;
+                    letter-spacing: 0.1px;
+                }
+
+                &-discount {
+                    color: #23856d;
+                    font-family: Montserrat;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 24px;
+                    letter-spacing: 0.1px;
+                }
+            }
+
+            &-ellipses {
+                display: flex;
+                justify-content: center;
+                gap: 8px;
+
+                &-element {
+                }
+            }
+        }
+    }
+
+    .numbers{
+        margin-top: 50px;
+        margin-bottom: 70px;
+        display: flex;
+        width: 1120px;
+        justify-content: space-between;
+
+        @include mobile{
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+        }
+
+        &__information{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            &-number{
+                color: #E74040;
+                font-family: Montserrat;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 50px; 
+                letter-spacing: 0.2px;
+
+            }
+                
+            
+
+            &-text{
+                display: flex;
+                flex-direction: column;
+
+
+                &-title{
+                    font-family: Montserrat;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 24px; 
+                    letter-spacing: 0.2px;
+                    color: #252B42;
+
+
+                }
+
+                &-items{
+                    font-family: Montserrat;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 16px; 
+                    letter-spacing: 0.2px;
+                    color:#737373 ;
+
+                }
+
+            }
+        }
+    }
+}
